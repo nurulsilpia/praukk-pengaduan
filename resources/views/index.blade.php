@@ -1,4 +1,6 @@
 @extends('layouts.main')
 @section('container')
-    <h1>Home</h1>
+    {{-- <div class="mt-5"> --}}
+        <h1>HOME</h1>
+    {{-- </div> --}}
 @endsection

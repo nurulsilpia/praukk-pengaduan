@@ -1,11 +1,11 @@
 @extends('layouts.main')
 @section('container')
-    <div class="col-lg-8 d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Buat Pengaduan</h1>
+    <div class="col-lg-8 mx-auto d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Laporkan Pengaduan</h1>
     </div>
 
-    <div class="col-lg-8">
-        <form action="/dashboard/posts" method="POST" class="mb-5 card shadow-sm p-3" enctype="multipart/form-data">
+    <div class="col-lg-8 mx-auto">
+        <form action="/pengaduan" method="POST" class="mb-5 card shadow-sm p-3" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
               <label for="nik" class="form-label">Nik</label>

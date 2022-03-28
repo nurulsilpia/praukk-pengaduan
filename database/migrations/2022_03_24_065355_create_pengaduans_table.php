@@ -15,7 +15,7 @@ class CreatePengaduansTable extends Migration
     {
         Schema::create('pengaduans', function (Blueprint $table) {
             $table->id();
-            $table->date('tgl_pengaduan');
+            // $table->date('tgl_pengaduan');
             $table->string('nik');
             $table->string('nama');
             $table->string('telp');

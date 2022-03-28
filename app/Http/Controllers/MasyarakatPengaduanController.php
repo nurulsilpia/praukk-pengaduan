@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 
 class MasyarakatPengaduanController extends Controller
@@ -13,7 +14,7 @@ class MasyarakatPengaduanController extends Controller
      */
     public function index()
     {
-        return view('pengaduan');
+        return view('masyarakatPengaduan');
     }
 
     /**
@@ -34,7 +35,22 @@ class MasyarakatPengaduanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nik' => 'required|numeric|min:10',
+            'nama' => 'required|max:255',
+            'telp' => 'required|numeric|min:10',
+            'image' => 'image|file|max:1024',
+            'isi' => 'required'
+        ]);
+
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+
+
+        Pengaduan::create($validatedData);
+
+        return redirect('/')->with('success', 'Pengaduan Berhasil Disimpan!');
     }
 
     /**
