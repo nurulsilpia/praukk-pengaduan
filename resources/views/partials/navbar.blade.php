@@ -6,14 +6,15 @@
 
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list list-unstyled m-0">
-                <li class="nav__item"><a href="/" class="nav__link {{ Request::is('/') ? 'active' : '' }}">Home</a></li>
-                <li class="nav__item"><a href="/pengaduan" class="nav__link {{ Request::is('pengaduan*') ? 'active' : '' }}">Pengaduan</a></li>
+                <li class="nav__item"><a href="/" class="nav__link {{ Request::is('/') ? 'active' : '' }}"><i class='bx bxs-home'></i>  Home</a></li>
+                <li class="nav__item"><a href="/pengaduan" class="nav__link {{ Request::is('pengaduan*') ? 'active' : '' }}"><i class='bx bxs-info-circle'></i> Pengaduan</a></li>
                 @can('admin')
-                    <li class="nav__item"><a href="/admin" class="nav__link {{ Request::is('admin*') ? 'active' : '' }}">Admin</a></li>
-                    <li class="nav__item"><a href="/petugas" class="nav__link {{ Request::is('petugas*') ? 'active' : '' }}">Petugas</a></li>
+                    <li class="nav__item"><a href="/admin" class="nav__link {{ Request::is('admin*') ? 'active' : '' }}"><i class='bx bxs-user-voice'></i> Admin</a></li>
+                    {{-- <li class="nav__item"><a href="/admin/daftar-petugas" class="nav__link {{ Request::is('petugas*') ? 'active' : '' }}"><i class='bx bxs-group'></i></i>Daftar Petugas</a></li> --}}
                 @endcan
                 @can('petugas', 'admin')
-                    <li class="nav__item"><a href="/petugas" class="nav__link {{ Request::is('petugas*') ? 'active' : '' }}">Petugas</a></li>
+                    <li class="nav__item"><a href="/petugas" class="nav__link {{ Request::is('petugas*') ? 'active' : '' }}"><i class='bx bxs-group'></i></i> Petugas</a></li>
+                    <li class="nav__item"><a href="/petugas-dashboard" class="nav__link {{ Request::is('petugas-dashboard') ? 'active' : '' }}"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
                 @endcan
                 
                 @auth

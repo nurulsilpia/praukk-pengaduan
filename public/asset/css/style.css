@@ -1,3 +1,70 @@
+/* setting color */
+.bg-primary {
+  background-color: #6777ef !important; }
+
+.bg-secondary {
+  background-color: #cdd3d8 !important; }
+
+.bg-success {
+  background-color: #47c363 !important; }
+
+.bg-info {
+  background-color: #3abaf4 !important; }
+
+.bg-warning {
+  background-color: #ffa426 !important; }
+
+.bg-danger {
+  background-color: #fc544b !important; }
+
+.bg-light {
+  background-color: #e3eaef !important; }
+
+.bg-dark {
+  background-color: #191d21 !important; }
+
+.text-primary, .text-primary-all *, .text-primary-all *:before, .text-primary-all *:after {
+  color: #6777ef !important; }
+
+.text-secondary, .text-secondary-all *, .text-secondary-all *:before, .text-secondary-all *:after {
+  color: #cdd3d8 !important; }
+
+.text-success, .text-success-all *, .text-success-all *:before, .text-success-all *:after {
+  color: #47c363 !important; }
+
+.text-info, .text-info-all *, .text-info-all *:before, .text-info-all *:after {
+  color: #3abaf4 !important; }
+
+.text-warning, .text-warning-all *, .text-warning-all *:before, .text-warning-all *:after {
+  color: #ffa426 !important; }
+
+.text-danger, .text-danger-all *, .text-danger-all *:before, .text-danger-all *:after {
+  color: #fc544b !important; }
+
+.text-light, .text-light-all *, .text-light-all *:before, .text-light-all *:after {
+  color: #e3eaef !important; }
+
+.text-dark, .text-dark-all *, .text-dark-all *:before, .text-dark-all *:after {
+  color: #191d21 !important; }
+
+/* Button Primary */
+.btn-primary, .btn-primary.disabled {
+  box-shadow: 0 2px 6px #acb5f6;
+  background-color: #6777ef;
+  border-color: #6777ef; }
+.btn-primary:focus, .btn-primary.disabled:focus {
+  background-color: #394eea !important; }
+.btn-primary:focus:active, .btn-primary.disabled:focus:active {
+  background-color: #394eea !important; }
+.btn-primary:active, .btn-primary:hover, .btn-primary.disabled:active, .btn-primary.disabled:hover {
+  background-color: #394eea !important; }
+
+.btn-outline-primary, .btn-outline-primary.disabled {
+  border-color: #6777ef;
+  color: #6777ef; }
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.disabled:hover, .btn-outline-primary.disabled:focus, .btn-outline-primary.disabled:active {
+  background-color: #6777ef !important;
+  color: #fff; }
 /* ================ NAVBAR=============== */
 /*===== BASE =====*/
 *, ::before, ::after {
@@ -189,3 +256,7 @@
     }
   }
   
+/* footer */
+footer ul li a:hover {
+  color: #6777ef;
+}

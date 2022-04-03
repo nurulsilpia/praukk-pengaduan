@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 
-class AdminPengaduanController extends Controller
+class AdminDataPetugasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class AdminPengaduanController extends Controller
      */
     public function index()
     {
-        return view('admin.index', [
-            'pengaduans' => Pengaduan::all()
+        return view('admin.dataPetugas', [
+            'pengaduan' => Pengaduan::all()
         ]);
     }
 
@@ -48,14 +48,7 @@ class AdminPengaduanController extends Controller
      */
     public function show($id)
     {
-        // return view('petugas.show', [ 
-        //     'pengaduan' => $pengaduan
-        // ]);
-
-        $pengaduan = Pengaduan::where('id', $id)->first();
-
-        return view('admin.show', compact('pengaduan'));
-
+        //
     }
 
     /**
@@ -90,11 +83,5 @@ class AdminPengaduanController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function cetak($id){
-
-        $pengaduan = Pengaduan::where('id', $id)->first();
-        return view('cetak.index', compact('pengaduan'));
     }
 }

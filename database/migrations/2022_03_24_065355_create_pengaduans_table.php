@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreatePengaduansTable extends Migration
 {
@@ -21,6 +22,7 @@ class CreatePengaduansTable extends Migration
             $table->string('telp');
             $table->text('isi');
             $table->string('image')->nullable();
+            $table->string('status')->default('draft');
             $table->timestamps();
         });
     }

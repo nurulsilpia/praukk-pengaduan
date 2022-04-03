@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pengaduan;
+use Illuminate\Support\Facades\DB;
 
 class PetugasPengaduanController extends Controller
 {
@@ -13,7 +15,9 @@ class PetugasPengaduanController extends Controller
      */
     public function index()
     {
-        return view('petugas.index');
+        return view('petugas.index', [
+            'pengaduans' => Pengaduan::all()
+        ]);
     }
 
     /**
@@ -45,7 +49,14 @@ class PetugasPengaduanController extends Controller
      */
     public function show($id)
     {
-        //
+        // return view('petugas.show', [ 
+        //     'pengaduan' => $pengaduan
+        // ]);
+
+        $pengaduan = Pengaduan::where('id', $id)->first();
+
+        return view('petugas.show', compact('pengaduan'));
+
     }
 
     /**
@@ -68,7 +79,14 @@ class PetugasPengaduanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $validatedData = $request->validate([
+            'status' => 'required'
+        ]);
+
+        Pengaduan::where('id', $id)->update($validatedData);
+
+        return redirect('/petugas')->with('success', 'Pengaduan Berhasil Di Update!');
     }
 
     /**

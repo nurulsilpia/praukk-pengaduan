@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminPengaduanController;
+use App\Http\Controllers\AdminDataPetugasController;
 use App\Http\Controllers\PetugasPengaduanController;
 use App\Http\Controllers\MasyarakatPengaduanController;
 
@@ -30,8 +31,18 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::resource('/admin', AdminPengaduanController::class)->middleware('admin');
+Route::resource('/pengaduan', MasyarakatPengaduanController::class);
 
 Route::resource('/petugas', PetugasPengaduanController::class)->middleware('petugas', 'admin');
+Route::get('/petugas-dashboard', function () {
+    return view('petugas.dashboard');
+})->middleware('petugas');
 
-Route::resource('/pengaduan', MasyarakatPengaduanController::class);
+
+
+Route::middleware('admin')->group(function () {
+    Route::resource('/admin', AdminPengaduanController::class);
+    // Route::resource('/admin/daftar-petugas', AdminDataPetugasController::class);
+
+    Route::get('/admin/cetak/{id}', [AdminPengaduanController::class, 'cetak']);
+});
