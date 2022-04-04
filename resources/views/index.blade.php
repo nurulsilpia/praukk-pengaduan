@@ -34,9 +34,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="header-image">
-                    <img src="asset/img/header/header-app.png" alt="" class="image-1">
+                    <img src="asset/img/header/header-app1.svg" class="image-1">
                 </div>
             </div>
             <div class="container">
