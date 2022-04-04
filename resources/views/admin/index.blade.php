@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('container')
+<div class="container mb-5" style="margin-top: 100px;">
     <h3 class="mb-3">Daftar Laporan Pengaduan Masyarakat</h3>
-
     <table class="rounded table table-hover shadow-sm pt-3" id="tableAll">
       <thead class="bg-secondary">
         <tr>
@@ -34,4 +34,5 @@
         @endforeach
       </tbody>
     </table>
+</div>
 @endsection

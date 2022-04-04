@@ -14,7 +14,7 @@
                 @endcan
                 @can('petugas', 'admin')
                     <li class="nav__item"><a href="/petugas" class="nav__link {{ Request::is('petugas*') ? 'active' : '' }}"><i class='bx bxs-group'></i></i> Petugas</a></li>
-                    <li class="nav__item"><a href="/petugas-dashboard" class="nav__link {{ Request::is('petugas-dashboard') ? 'active' : '' }}"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                    {{-- <li class="nav__item"><a href="/petugas-dashboard" class="nav__link {{ Request::is('petugas-dashboard') ? 'active' : '' }}"><i class='bx bxs-dashboard'></i> Dashboard</a></li> --}}
                 @endcan
                 
                 @auth

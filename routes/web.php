@@ -34,9 +34,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::resource('/pengaduan', MasyarakatPengaduanController::class);
 
 Route::resource('/petugas', PetugasPengaduanController::class)->middleware('petugas', 'admin');
-Route::get('/petugas-dashboard', function () {
-    return view('petugas.dashboard');
-})->middleware('petugas');
+// Route::get('/petugas-dashboard', function () {
+//     return view('petugas.dashboard');
+// })->middleware('petugas');
 
 
 

@@ -1,4 +1,102 @@
-/* setting color */
+/* -------------- font google --------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ------------ all animation ---------- */
+@keyframes bounceTop-1 {
+
+  0%,
+  100% {
+      transform: translateY(-30px);
+  }
+  50% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes animation-1 {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes spinner-linspin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-easespin {
+  12.5% {
+      transform: rotate(135deg);
+  }
+
+  25% {
+      transform: rotate(270deg);
+  }
+
+  37.5% {
+      transform: rotate(405deg);
+  }
+
+  50% {
+      transform: rotate(540deg);
+  }
+
+  62.5% {
+      transform: rotate(675deg);
+  }
+
+  75% {
+      transform: rotate(810deg);
+  }
+
+  78.5% {
+      transform: rotate(945deg);
+  }
+
+  to {
+      transform: rotate(1080);
+  }
+}
+
+@keyframes spinner-left-spin {
+  0% {
+      transform: rotate(130deg);
+  }
+
+  50% {
+      transform: rotate(-5deg);
+  }
+
+  to {
+      transform: rotate(130deg);
+  }
+}
+
+@keyframes spinner-right-spin {
+  0% {
+      transform: rotate(-130deg);
+  }
+
+  50% {
+      transform: rotate(5deg);
+  }
+
+  to {
+      transform: rotate(-130deg);
+  }
+}
+/* End Animation */
+
+/* Modify color default boostrap */
 .bg-primary {
   background-color: #6777ef !important; }
 
@@ -47,7 +145,7 @@
 .text-dark, .text-dark-all *, .text-dark-all *:before, .text-dark-all *:after {
   color: #191d21 !important; }
 
-/* Button Primary */
+/* Button Primary Boostrap Modified*/
 .btn-primary, .btn-primary.disabled {
   box-shadow: 0 2px 6px #acb5f6;
   background-color: #6777ef;
@@ -65,6 +163,28 @@
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.disabled:hover, .btn-outline-primary.disabled:focus, .btn-outline-primary.disabled:active {
   background-color: #6777ef !important;
   color: #fff; }
+
+/* ------------ other button css ---------- */
+.main-btn {
+  display: inline-block;
+  padding: 0 25px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 55px;
+  border: 2px solid #6777ef;
+  border-radius: 5px;
+  background-color: #6777ef;
+  color: #fff;
+}
+
+.main-btn:hover {
+  background-color: rgba(8, 152, 231, .7);
+  color: #fff;
+  border-color: transparent;
+}
+/* End Button */
+
 /* ================ NAVBAR=============== */
 /*===== BASE =====*/
 *, ::before, ::after {
@@ -255,6 +375,153 @@
       margin-right: auto;
     }
   }
+/*===== End Nav =====*/
+
+/* Header */
+.header-hero {
+  position: relative;
+  top: 0;
+  height: 750px;
+  background-position: bottom center;
+}
+
+.header-hero .shape {
+  position: absolute;
+}
+
+.header-hero .shape.shape-1 {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  left: 130px;
+  top: 20%;
+  border-radius: 50%;
+  background: #637ae4;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero .shape.shape-2 {
+  width: 39px;
+  height: 39px;
+  left: 150px;
+  bottom: 40px;
+  border-radius: 50%;
+  background: #0898e7;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero .shape.shape-3 {
+  width: 19px;
+  height: 19px;
+  left: 26px;
+  bottom: 25%;
+  border-radius: 50%;
+  background: #ff846f;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero .shape.shape-4 {
+  width: 39px;
+  height: 39px;
+  left: 40%;
+  top: 175px;
+  border-radius: 50%;
+  background: #4ebaf5;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero .shape.shape-5 {
+  width: 19px;
+  height: 19px;
+  left: 50%;
+  bottom: 20%;
+  border-radius: 50%;
+  background: #ff5b56;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero .shape.shape-6 {
+  width: 14px;
+  height: 14px;
+  left: 45%;
+  bottom: 70%;
+  border-radius: 50%;
+  background: #4ebaf5;
+  animation: animation-1 2s linear infinite;
+}
+
+.header-hero-content {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+    .header-hero-content {
+        margin-top: 30%;
+    }
+}
+
+.header-hero-content .header-title {
+  font-size: 42px;
+  color: #38424d;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.header-hero-content .header-title span {
+  color: #fc544b;
+}
+
+.header-hero-content .text {
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.header-hero-content ul {
+  margin-top: 30px;
+}
+
+.header-image {
+  position: relative;
+  padding-top: 80px;
+  animation: bounceTop-1 3s ease infinite;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+(max-width: 767px) {
+  .header-image img {
+      height: 0;
+  }
+}
+
+.header-shape-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url(../img/header/header-shape-1.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.header-shape-2 {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.vbox-close {
+  color: #fff;
+  background: transparent;
+  font-size: 40px;
+  right: 12%;
+}
+/* End Header */
   
 /* footer */
 footer ul li a:hover {

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('container')
+<div class="container mb-5" style="margin-top: 100px;">    
     <div class="card">
-        
         <div class="row my-3 justify-content-center">
             <div class="col-lg-8">
                 <h2>Detail Pengaduan dari <span class="text-primary">{{ $pengaduan->nama }}</span></h2>
@@ -52,4 +52,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
