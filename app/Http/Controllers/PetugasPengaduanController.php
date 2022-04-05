@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pengaduan;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class PetugasPengaduanController extends Controller
 {
@@ -97,6 +98,8 @@ class PetugasPengaduanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pengaduan::destroy($id);
+
+        return redirect('/petugas')->with('danger', 'Pengaduan Berhasil Di Hapus!');
     }
 }

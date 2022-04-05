@@ -1,6 +1,22 @@
 @extends('layouts.main')
 @section('container')
 <div class="container mb-5" style="margin-top: 100px;">
+      {{-- Validate --}}
+      @if(session()->has('success'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      @endif
+
+      @if(session()->has('danger'))
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('danger') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      @endif
+      {{--  --}}
+
     <h3 class="mb-3">Daftar Laporan Pengaduan Masyarakat</h3>
 
     <table border="0.5" class="rounded table table-hover shadow-sm pt-3" id="tableAll">
